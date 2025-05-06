@@ -1,0 +1,178 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Main Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Main
+  m_TableCollectionNameGuidString: 0222524e8627b6f4bbc0f80c72845b73
+  m_Entries:
+  - m_Id: 8241270784
+    m_Key: Test
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47258922930176
+    m_Key: Hint_Drain
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47423427727360
+    m_Key: Hint_Put
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48374473576448
+    m_Key: Fluid_Fuel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48527569866752
+    m_Key: Fluid_Lava
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48615889326080
+    m_Key: Fluid_Oil
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48680850706432
+    m_Key: Fluid_Water
+    m_Metadata:
+      m_Items: []
+  - m_Id: 349074002669568
+    m_Key: Build_Tank
+    m_Metadata:
+      m_Items: []
+  - m_Id: 350974399868928
+    m_Key: Fluid_Empty
+    m_Metadata:
+      m_Items: []
+  - m_Id: 351059955281920
+    m_Key: Popup_TankFill
+    m_Metadata:
+      m_Items: []
+  - m_Id: 351838883672064
+    m_Key: Build_Geo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 352019414904832
+    m_Key: Popup_GeoStatus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 964424037801984
+    m_Key: Popup_nowayback
+    m_Metadata:
+      m_Items: []
+  - m_Id: 965015422083072
+    m_Key: Popup_NoWayForward
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1134732313092096
+    m_Key: Popup_HelpMe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1139889490878464
+    m_Key: Popup_BIn
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1148030081294336
+    m_Key: Tutor_Lava1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1149060210745344
+    m_Key: Tutor_Lava2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1149742775001088
+    m_Key: Tutor_Fence1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1151193861578752
+    m_Key: Tutor_Fence2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1154398603436032
+    m_Key: Fluid_Blue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1154661166866432
+    m_Key: Fluid_Green
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1154799780225024
+    m_Key: Fluid_Red
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1327357628506112
+    m_Key: Tutor_Pumps1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1327402377535488
+    m_Key: Tutor_Pumps2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1327413119148032
+    m_Key: 'Tutor_Pumps3
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1328671037054976
+    m_Key: Build_Pump
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1333685587533824
+    m_Key: Popup_Works
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1333749890408448
+    m_Key: Popup_NotWorks
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1339777600184320
+    m_Key: Tutor_Refinery
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1355445699600384
+    m_Key: Popup_Start1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1355479082065920
+    m_Key: Popup_Start2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1355596589686784
+    m_Key: Popup_Start3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1356790284410880
+    m_Key: Hint_SignleButton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1359794446262272
+    m_Key: Popup_Kimchi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1433109382815744
+    m_Key: Tutor_Bridge
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1782249639895040
+    m_Key: Tutor_Bridge2
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 1422151890518147305
+  references:
+    version: 2
+    RefIds:
+    - rid: 1422151890518147305
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1745938200595

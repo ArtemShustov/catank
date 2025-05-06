@@ -1,0 +1,189 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Main_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 0222524e8627b6f4bbc0f80c72845b73, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 1422151890518147307
+  m_TableData:
+  - m_Id: 8241270784
+    m_Localized: '{key} en {test}'
+    m_Metadata:
+      m_Items:
+      - rid: 1422151890518147307
+  - m_Id: 47258922930176
+    m_Localized: '[{key}] to drain {fluid}'
+    m_Metadata:
+      m_Items:
+      - rid: 1422151890518147307
+  - m_Id: 47423427727360
+    m_Localized: '[{key}] to release {fluid}'
+    m_Metadata:
+      m_Items:
+      - rid: 1422151890518147307
+  - m_Id: 48374473576448
+    m_Localized: Fuel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48527569866752
+    m_Localized: Lava
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48615889326080
+    m_Localized: Crude Oil
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48680850706432
+    m_Localized: Water
+    m_Metadata:
+      m_Items: []
+  - m_Id: 349074002669568
+    m_Localized: Tank
+    m_Metadata:
+      m_Items: []
+  - m_Id: 350974399868928
+    m_Localized: Empty
+    m_Metadata:
+      m_Items: []
+  - m_Id: 351059955281920
+    m_Localized: '{fluid} - {fill}%'
+    m_Metadata:
+      m_Items:
+      - rid: 1422151890518147307
+  - m_Id: 351838883672064
+    m_Localized: Geotermal generator
+    m_Metadata:
+      m_Items: []
+  - m_Id: 352019414904832
+    m_Localized: '{fill}% fill'
+    m_Metadata:
+      m_Items:
+      - rid: 1422151890518147307
+  - m_Id: 964424037801984
+    m_Localized: No way back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 965015422083072
+    m_Localized: We won't go there yet.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1134732313092096
+    m_Localized: Help me please
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1139889490878464
+    m_Localized: You can drain excess liquid here.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1148030081294336
+    m_Localized: Go to the lava to collect it
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1149060210745344
+    m_Localized: Fill both generators to >50%
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1149742775001088
+    m_Localized: I installed a door with a combination lock from <#FF0000>pirates</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1151193861578752
+    m_Localized: All liquids need to be placed in their places
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1154398603436032
+    m_Localized: Blue water
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1154661166866432
+    m_Localized: Green water
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1154799780225024
+    m_Localized: Red water
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1327357628506112
+    m_Localized: This is my favorite part - the oil pumps, they pump... oil!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1327402377535488
+    m_Localized: The lamp shows the current temperature, keep it <#00FF00>optimal</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1327413119148032
+    m_Localized: Put lava or water in the green tank to control
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1328671037054976
+    m_Localized: Cruide oil pump
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1333685587533824
+    m_Localized: <#00FF00>Works</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1333749890408448
+    m_Localized: <#FF0000>Not works</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1339777600184320
+    m_Localized: Great, all that's left is to process the oil into fuel.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1356790284410880
+    m_Localized: '[{key}]'
+    m_Metadata:
+      m_Items:
+      - rid: 1422151890518147307
+  - m_Id: 1359794446262272
+    m_Localized: "Kimchi vending machine \n(don't work)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1355445699600384
+    m_Localized: 3... 2... 1... Launch!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1355479082065920
+    m_Localized: Oh, looks like I forgot to fuel the rocket with <#AAAA00>fuel</color>.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1355596589686784
+    m_Localized: "I\u2019ll have to head back to my factory and make some more <#AAAA00>fuel</color>..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1433109382815744
+    m_Localized: Now I need to fill each tank with the right amount of <#AAAA00>Fuel</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1782249639895040
+    m_Localized: Pour <#AA0000>exactly one</color> bucket at a time
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 1422151890518147307
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 8241270784
+        - id: 47258922930176
+        - id: 47423427727360
+        - id: 351059955281920
+        - id: 352019414904832
+        - id: 1356790284410880

@@ -1,0 +1,18 @@
+# ignore all
+/*
+/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
+/[Aa]ssets/[Ss]treamingAssets/aa.meta
+/[Aa]ssets/[Ss]treamingAssets/aa/*
+/[Aa]ssets/[Mm]odels/[Ss]rc/*
+/[Aa]ssets/[Mm]odels/[Ss]ources/*
+/[Aa]ssets/[Tt]hird[Pp]arty/*
+/[Aa]ssets/[Tt]hird [Pp]arty/*
+/[Aa]ssets/[Mm]irror/*
+
+# but not this
+!README.md
+!.gitignore
+!.gitattributes
+![Pp]rojectSettings
+![Pp]ackages
+![Aa]ssets
