@@ -8,7 +8,9 @@ namespace Game.UI {
 		[SerializeField] private LocalizeStringEvent _label;
 		
 		private void Refresh() {
-			_label.StringReference.Set("fill", $"{_container?.Fill * 100:00.#}");
+			var max = _container.Capacity / 1000f;
+			var current = max * _container.Fill;
+			_label.StringReference.Set("fill", $"{current:0.#}/{max:0.#}");
 		}
 
 		private void OnEnable() {

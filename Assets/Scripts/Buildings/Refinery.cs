@@ -1,3 +1,4 @@
+using System;
 using Game.Fluids;
 using UnityEngine;
 
@@ -8,7 +9,10 @@ namespace Game.Buildings {
 		[SerializeField] private FluidContainer _output;
 		[SerializeField] private Fluid _fuel;
 
+		private bool _used;
 		private float _timer;
+
+		public event Action UsedFirstTime;
 
 		private void Awake() {
 			_output.SetFluid(_fuel);
@@ -26,6 +30,10 @@ namespace Game.Buildings {
 			if (toRefine > 0) {
 				_input.SetStored(_input.Stored - toRefine);
 				_output.SetStored(_output.Stored + toRefine);
+				if (!_used) {
+					UsedFirstTime?.Invoke();
+					_used = true;
+				}
 			}
 		}
 	}

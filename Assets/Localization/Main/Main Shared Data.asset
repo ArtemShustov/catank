@@ -150,7 +150,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1356790284410880
-    m_Key: Hint_SignleButton
+    m_Key: Hint_SingleButton
     m_Metadata:
       m_Items: []
   - m_Id: 1359794446262272
@@ -163,6 +163,54 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1782249639895040
     m_Key: Tutor_Bridge2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24878999770488832
+    m_Key: Hint_Output
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25262047473164288
+    m_Key: Hint_PipeInput
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25422757906108416
+    m_Key: Hint_Interact
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25432715942973440
+    m_Key: Hint_Input
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25648999226142720
+    m_Key: Tasks_Label
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25649192831021056
+    m_Key: Tasks_Lava
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25649599531708416
+    m_Key: Tasks_Pumps
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25650204849467392
+    m_Key: Tasks_Refinery
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25650378300715008
+    m_Key: Tasks_Rocket
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25679117491367936
+    m_Key: End_Restart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25679719126528000
+    m_Key: End_BigText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25679831592595456
+    m_Key: End_SmallText
     m_Metadata:
       m_Items: []
   m_Metadata:

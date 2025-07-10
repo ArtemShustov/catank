@@ -6,8 +6,12 @@ using UnityEngine.Localization;
 namespace Game.UI {
 	public class GameUI: MonoBehaviour {
 		[SerializeField] private InteractionHint _interactionHint;
+		[SerializeField] private GameObject _interactionButton;
 		[SerializeField] private RocketPanel _rocketPanel;
 		[SerializeField] private CanvasGroup _endPanel;
+		[SerializeField] private GameObject _onScreenControl;
+		[SerializeField] private GameObject _gamePanel;
+		private bool _isMobile;
 		
 		public RocketPanel RocketPanel => _rocketPanel;
 		public CanvasGroup EndPanel => _endPanel;
@@ -19,13 +23,30 @@ namespace Game.UI {
 				Instance = this;
 			}
 			
-			_interactionHint.gameObject.SetActive(false);
 			_rocketPanel.gameObject.SetActive(false);
 			_endPanel.gameObject.SetActive(false);
+			_interactionButton.SetActive(false);
+			_interactionHint.gameObject.SetActive(false);
+			_onScreenControl.SetActive(false);
 		}
 
+		public void SetIsMobile(bool isMobile) {
+			_isMobile = isMobile;
+			var isActive = _interactionButton.activeSelf || _interactionHint.gameObject.activeSelf;
+			_interactionHint.gameObject.SetActive(isActive && !isMobile);
+			_interactionButton.SetActive(isActive && isMobile);
+			_onScreenControl.SetActive(isMobile);
+		}
 		public void SetInteractionHint(LocalizedString text) {
-			_interactionHint.SetInteractionHint(text);
+			if (_isMobile) {
+				_interactionButton.SetActive(text != null);
+			} else {
+				_interactionHint.gameObject.SetActive(text != null);
+				_interactionHint.SetInteractionHint(text);
+			}
+		}
+		public void SetGamePanel(bool active) {
+			_gamePanel.SetActive(active);
 		}
 
 		public async Task ShowEndPanelAsync(CancellationToken cancellationToken) {

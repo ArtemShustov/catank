@@ -25,12 +25,12 @@ MonoBehaviour:
       m_Items:
       - rid: 1422151890518147307
   - m_Id: 47258922930176
-    m_Localized: '[{key}] to drain {fluid}'
+    m_Localized: '[{key}] to collect {fluid}'
     m_Metadata:
       m_Items:
       - rid: 1422151890518147307
   - m_Id: 47423427727360
-    m_Localized: '[{key}] to release {fluid}'
+    m_Localized: '[{key}] to eject {fluid}'
     m_Metadata:
       m_Items:
       - rid: 1422151890518147307
@@ -59,7 +59,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 351059955281920
-    m_Localized: '{fluid} - {fill}%'
+    m_Localized: '{fluid} - {fill} buckets'
     m_Metadata:
       m_Items:
       - rid: 1422151890518147307
@@ -68,7 +68,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 352019414904832
-    m_Localized: '{fill}% fill'
+    m_Localized: '{fill} buckets'
     m_Metadata:
       m_Items:
       - rid: 1422151890518147307
@@ -170,7 +170,56 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1782249639895040
-    m_Localized: Pour <#AA0000>exactly one</color> bucket at a time
+    m_Localized: The <#AA0000>crates</color> show the amount of buckets.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24878999770488832
+    m_Localized: Output
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25262047473164288
+    m_Localized: Pipeline input
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25422757906108416
+    m_Localized: Interact
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25432715942973440
+    m_Localized: Input
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25648999226142720
+    m_Localized: 'Tasks:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25649192831021056
+    m_Localized: Fill geothermal generators
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25649599531708416
+    m_Localized: 'Extract crude oil: {current}/{goal}'
+    m_Metadata:
+      m_Items:
+      - rid: 1422151890518147307
+  - m_Id: 25650204849467392
+    m_Localized: Refine crude oil into fuel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25650378300715008
+    m_Localized: Fill the rocket
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25679117491367936
+    m_Localized: Play again
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25679719126528000
+    m_Localized: Thank for playing!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25679831592595456
+    m_Localized: You have successfully flown away from this planet!
     m_Metadata:
       m_Items: []
   references:
@@ -187,3 +236,4 @@ MonoBehaviour:
         - id: 351059955281920
         - id: 352019414904832
         - id: 1356790284410880
+        - id: 25649599531708416

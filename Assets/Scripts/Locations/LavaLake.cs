@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -17,6 +18,8 @@ namespace Game.Locations {
 		[SerializeField] private GeoGenerator[] _generators;
 		[SerializeField] private GameObject _helpPickup;
 
+		public event Action Completed;
+		
 		private CancellationTokenSource _source;
 		private bool _triggered;
 		private bool _passed;
@@ -45,6 +48,7 @@ namespace Game.Locations {
 					_helpPickup.SetActive(false);
 					_backwardWall.SetActive(false);
 					_forwardWall.SetActive(false);
+					Completed?.Invoke();
 					break;
 				}
 				await Awaitable.NextFrameAsync(cancellationToken);

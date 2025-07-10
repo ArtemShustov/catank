@@ -11,11 +11,10 @@ namespace Game.UI {
 		[SerializeField] private InputIcons _icons;
 		[SerializeField] private InputActionReference _input;
 		[SerializeField] private LocalizeStringEvent _label;
-
-		private const string BUTTON_KEY = "key"; 
+		
+		private const string BUTTON_KEY = "key";
 		
 		public void SetInteractionHint(LocalizedString text) {
-			_label.gameObject.SetActive(text != null);
 			text.Set(BUTTON_KEY, GetInputText());
 			_label.StringReference = text;
 			_label.RefreshString();
@@ -53,7 +52,7 @@ namespace Game.UI {
 			if (_label.StringReference == null) {
 				return;
 			}
-			
+
 			_label.StringReference.Set(BUTTON_KEY, GetInputText());
 			_label.RefreshString();
 		}

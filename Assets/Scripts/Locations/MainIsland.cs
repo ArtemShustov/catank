@@ -11,6 +11,7 @@ namespace Game.Locations {
 		[SerializeField] private PopupHint[] _hints;
 		[SerializeField] private Player _player;
 		[SerializeField] private Transform _spawnPoint;
+		[SerializeField] private GameUI _ui;
 
 		private CancellationTokenSource _source;
 
@@ -31,6 +32,7 @@ namespace Game.Locations {
 			HideAsync(_source.Token).Forget();
 		}
 		private async Task ShowAsync(CancellationToken token) {
+			_ui.SetGamePanel(false);
 			GameUI.Instance.RocketPanel.ButtonClicked += OnStartButton;
 			
 			_player.gameObject.SetActive(false);
@@ -55,6 +57,7 @@ namespace Game.Locations {
 			_player.gameObject.SetActive(true);
 			Cursor.lockState = CursorLockMode.Locked;
 			Cursor.visible = false;
+			_ui.SetGamePanel(true);
 		}
 
 		private void OnStartButton() {

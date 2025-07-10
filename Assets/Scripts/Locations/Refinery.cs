@@ -1,3 +1,4 @@
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 using Game.UI;
@@ -8,9 +9,15 @@ namespace Game.Locations {
 	public class Refinery: MonoBehaviour {
 		[SerializeField] private CinemachineCamera _tutorCamera;
 		[SerializeField] private PopupHint _hint;
+		[SerializeField] private Buildings.Refinery _refinery;
 
 		private CancellationTokenSource _source;
 		private bool _triggered;
+		
+		public event Action UsedFirstTime {
+			add => _refinery.UsedFirstTime += value;
+			remove => _refinery.UsedFirstTime -= value;
+		}
 
 		public void ShowTutorial() {
 			_source?.Cancel();

@@ -88,12 +88,13 @@ namespace Game {
 				to.SetFill((startTo + c) / (float)to.Capacity);
 				await Awaitable.NextFrameAsync();
 			}
-			
-			from.SetStored(startFrom - count);
+
+			count = GetTransferCount(from, to);
+			from.SetStored(from.Stored - count);
 			if (clearFluids && from.Fill == 0) {
 				from.SetFluid(null);
 			}
-			to.SetStored(startTo + count);
+			to.SetStored(to.Stored + count);
 			
 			player.EnableInput();
 			Stop();

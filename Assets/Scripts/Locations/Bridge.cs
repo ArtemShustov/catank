@@ -33,7 +33,7 @@ namespace Game.Locations {
 			ShowTutorialAsync().Forget();
 		}
 		public void ShowTutorialExtended() {
-			ShowTutotialExtentedAsync().Forget();
+			ShowTutotialExtendedAsync().Forget();
 		}
 
 		private async Task ShowTutorialAsync(CancellationToken cancellationToken = default) {
@@ -51,7 +51,7 @@ namespace Game.Locations {
 				
 			GameRoot.Instance.Player.EnableInput();
 		}
-		private async Task ShowTutotialExtentedAsync(CancellationToken cancellationToken = default) {
+		private async Task ShowTutotialExtendedAsync(CancellationToken cancellationToken = default) {
 			GameRoot.Instance.Player.DisableInput();
 			_camera.gameObject.SetActive(true);
 			_camera.Priority = 1000;
@@ -72,7 +72,7 @@ namespace Game.Locations {
 			for (var i = 0; i < _containers.Length; i++) {
 				var container = _containers[i];
 				var targetFill = _targetFills[i];
-				if (container.Stored / 1000 != targetFill) {
+				if (Mathf.Abs(container.Stored - targetFill) > 400) {
 					return false;
 				}
 			}

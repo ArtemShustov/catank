@@ -7,6 +7,7 @@ namespace Game.Buildings {
 		[SerializeField] private int _usage = 1000;
 		[Header("Components")]
 		[SerializeField] private FluidContainer _container;
+		[SerializeField] private AudioSource _source;
 		[SerializeField] private Rotate _fan;
 		private float _timer;
 		
@@ -27,7 +28,13 @@ namespace Game.Buildings {
 		}
 
 		private void OnFillChanged() {
-			_fan.enabled = _container.Fill != 0;
+			var isWorking = _container.Fill != 0;
+			_fan.enabled = isWorking;
+			if (isWorking) {
+				_source.Play();
+			} else {
+				_source.Stop();
+			}
 		}
 		private void OnEnable() {
 			_container.FillChanged += OnFillChanged;

@@ -16,6 +16,7 @@ namespace Game.Buildings {
 		[SerializeField] private FluidContainer _controlTank;
 		[SerializeField] private FluidContainer _output;
 		[SerializeField] private MeshRenderer _lamp;
+		[SerializeField] private AudioSource _source;
 		
 		private MaterialPropertyBlock _lampBlock;
 		private State _state;
@@ -23,8 +24,9 @@ namespace Game.Buildings {
 		private float _timer;
 
 		public bool IsWorking => _temp >= _workArea.x && _temp <= _workArea.y;
+		public FluidContainer Output => _output;
 		public event Action TemperatureChanged;
-
+		
 		private void Awake() {
 			_output.SetFluid(_oil);
 			_lampBlock = new MaterialPropertyBlock();
@@ -71,6 +73,14 @@ namespace Game.Buildings {
 				UpdateLamp();
 
 				TemperatureChanged?.Invoke();
+				
+				if (_source.isPlaying != IsWorking) {
+					if (IsWorking) {
+						_source.Play();
+					} else {
+						_source.Stop();
+					}
+				}
 			}
 
 			if (IsWorking) {

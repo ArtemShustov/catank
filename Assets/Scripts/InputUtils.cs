@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 namespace Game {
@@ -24,6 +26,20 @@ namespace Game {
 		private static void Init() {
 			_lastDevice = null;
 			InputSystem.onActionChange += OnActionChane;
+		}
+
+		public static bool IsOverUI(PointerEventData eventData) {
+			List<RaycastResult> results = new List<RaycastResult>();
+			EventSystem.current.RaycastAll(eventData, results);
+
+			return results.Count > 0;
+		}
+		public static bool IsOverUI(Vector2 screenPoint) {
+			var eventData = new PointerEventData(EventSystem.current) {
+				position = screenPoint
+			};
+
+			return IsOverUI(eventData);
 		}
 	}
 }

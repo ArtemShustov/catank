@@ -17,6 +17,7 @@ namespace Game.Fluids {
 
 		public event Action FluidChanged;
 		public event Action FillChanged;
+		public event Action<int, int> StoredChanged;
 		
 		public float Fill => _void ? 0 : _fill;
 		public int Capacity => _void ? int.MaxValue : _capacity;
@@ -41,8 +42,10 @@ namespace Game.Fluids {
 			if (_void) {
 				return;
 			}
+			var before = _stored;
 			_stored = Mathf.Clamp(stored, 0, _capacity);
 			SetFill(_stored / (float)_capacity);
+			StoredChanged?.Invoke(before, _stored);
 		}
 
 		private void OnValidate() {

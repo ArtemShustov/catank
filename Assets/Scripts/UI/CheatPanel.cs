@@ -1,6 +1,7 @@
 using Game.Characters;
 using Game.Characters.States;
 using Game.Fluids;
+using Game.Utils;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
@@ -58,6 +59,17 @@ namespace Game.UI {
 				state.Init(player);
 				player.ChangeState(state);
 			}
+		}
+		public void ToggleFPS() {
+			var fpsCounter = GameObject.FindFirstObjectByType<FPSCounter>(FindObjectsInactive.Include);
+			if (!fpsCounter) {
+				return;
+			}
+			fpsCounter.gameObject.SetActive(!fpsCounter.gameObject.activeSelf);
+		}
+		public void ToggleQualityLevel() {
+			var current = QualitySettings.GetQualityLevel();
+			QualitySettings.SetQualityLevel(current == 0 ? 1 : 0);
 		}
 
 		private void OnEnable() {

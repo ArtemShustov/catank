@@ -1,5 +1,7 @@
+using System;
 using System.Threading;
 using System.Threading.Tasks;
+using Game.Buildings;
 using Game.UI;
 using Unity.Cinemachine;
 using UnityEngine;
@@ -8,9 +10,12 @@ namespace Game.Locations {
 	public class Pumps: MonoBehaviour {
 		[SerializeField] private PopupHint[] _hints;
 		[SerializeField] private CinemachineCamera _tutorCamera;
+		[SerializeField] private Pump[] _pumps;
 
 		private CancellationTokenSource _source;
 		private bool _triggered;
+
+		public event Action<int> OilTaken;
 		
 		private void Activate() {
 			_triggered = true;
@@ -46,6 +51,17 @@ namespace Game.Locations {
 		private void OnTriggerEnter(Collider other) {
 			if (!_triggered && other.TryGetComponent<Player>(out var player)) {
 				Activate();
+			}
+		}
+		private void OnEnable() {
+			foreach (var pump in _pumps) {
+				pump.Output.StoredChanged += OnStoredChanged;
+			}
+		}
+		private void OnStoredChanged(int before, int after) {
+			var delta = after - before;
+			if (delta < 0) {
+				OilTaken?.Invoke(Mathf.Abs(delta));
 			}
 		}
 	}

@@ -12,6 +12,7 @@ namespace Game {
 		[SerializeField] private FluidContainer _rocket;
 		[SerializeField] private CinemachineCamera _camera;
 		[SerializeField] private ParticleSystem _fire;
+		[SerializeField] private GameUI _ui;
 
 		private bool _triggered;
 		
@@ -25,6 +26,7 @@ namespace Game {
 				GameUI.Instance.RocketPanel.ButtonClicked += OnButtonClicked;
 				Cursor.lockState = CursorLockMode.None;
 				Cursor.visible = true;
+				_ui.SetGamePanel(false);
 			}
 		}
 		private void OnButtonClicked() {
